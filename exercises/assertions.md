@@ -12,9 +12,11 @@ Answer the following questions:
 
 ## Answer
 
-1. This assertion fails because the value of "3*.4" isn't exactly "1.2" but more like "1.2000000002". This is the result of a problem with the representation of floats in Java (but also in the other languages). This type of check should be done using `assertEquals` instead of `assertTrue`
+1. Cette assertion échoue car la valeur de "3* .4" n'est pas exactement de 1.2, mais plutôt quelque chose de l'ordre de "1.2000002". Cela est lié à un problème de représentation des flottants en Java ( et également d'autres langages). Pour palier à cela, il faut utiliser `assertEquals` au lieu de `assertTrue`.
 
-2. ``assertEquals`` returns true if the two elements are of the same value, while ``assertSame``returns true only if it is the same element, i.e. using ``assertEquals`` with two elements of the same value would return true but `assertSame` would not.
+2. ``assertEquals`` retourne vrai si les deux éléments ont la même valeur, alors que ``assertSame`` ne retourne vrai que s'il s'agit du même élément. Cela signifie qu'utiliser ``assertEquals`` avec deux éléments de même valeur renverrait vrai, mais `assertSame` renverrait faux.
+
+Exemple :
 ```java
 Integer i1 = new Integer(1);
 Integer i2 = new Integer(1);
@@ -23,6 +25,6 @@ assertSame(i1, i2); // => False
 assertSame(i1, i1); // => True
 ```
 
-3. `fail` can be used to verify that a certain portion of the code is never used. For example, a default case in a switch or match that should not be used, or when catching an exception.
+3. `fail` peut être utilisé pour vérifier qu'on ne passe jamais par une certaine portion du code. Par exemple, un cas par défaut dans un switch qui ne devrait jamais être utilisé, ou lorsque l'on catch une exception.
 
-4. ``assertThrows`` allows you to verify that the exception is correctly thrown, and you can check its attributes .It allows you to verify that it is thrown using the right parameters
+4. ``assertThrows`` permet de vérifier que l'erreur est bien lancée, ainsi que vérifier ses attributs. Cela permet de vérifier qu'elle est lancée avec les bons paramètres.

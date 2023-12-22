@@ -137,3 +137,9 @@ Avec ces deux cas, on obtient une couverture de 100%.
 
 Avec notre couverture de tests de 100%, il n'y aucun prédicat incluant plus de deux booléens qui n'a pas été testé.
 
+### 4. Mutation Testing
+
+On utilise l'extension IntelliJ PITest pour tester les mutations, et on obtient un score de 84%.
+![img.png](img.png)
+
+Même après presque une heure de tentatives diverses pour débusquer d'autres mutants, nous n'avons pas réussi à améliorer notre score final, qui reste de 84%.
