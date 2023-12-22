@@ -1,7 +1,6 @@
 package fr.istic.vv;
 
 import java.util.LinkedList;
-import java.util.List;
 
 class Date implements Comparable<Date> {
     private int day;
